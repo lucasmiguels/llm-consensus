@@ -1,0 +1,7 @@
+openai==1.75.0
+sentence-transformers==3.4.1
+numpy==2.2.4
+scipy==1.15.2
+python-dotenv==1.1.0
+rich==14.0.0
+

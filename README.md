@@ -58,6 +58,36 @@ python src/run_debate.py --question "Qual o impacto da IA no mercado de trabalho
 
 ---
 
+## Baseline (Entrega 2)
+
+O baseline executa três agentes com personas distintas (economista, cientista da computação, sociólogo) sobre a mesma questão, de forma independente e sem rodadas de feedback. Serve como referência para comparação com o sistema iterativo Delphi.
+
+### Execução via script
+
+```bash
+# Questão quantitativa
+python src/run_baseline.py -q "Qual percentual dos empregos formais brasileiros você estima que serão automatizados pela IA nos próximos 10 anos? Forneça um número percentual específico com justificativa."
+
+# Questão qualitativa
+python src/run_baseline.py -q "Como a inteligência artificial transformará a educação e o mercado de trabalho brasileiro nos próximos 10 anos? Considere tanto oportunidades quanto riscos."
+```
+
+### Execução via notebook
+
+```bash
+jupyter notebook notebooks/baseline.ipynb
+```
+
+Selecione a questão na célula 3 e execute todas as células em ordem.
+
+### Saída
+
+- **Terminal:** tabelas com respostas resumidas, similaridade semântica e estimativas numéricas.
+- **Arquivo:** `data/baseline_YYYYMMDD_HHMMSS.json` com log completo (respostas, tokens, métricas).
+
+
+---
+
 ## Referências
 
 Nóbrega, L. et al. **AI-Delphi: Emulating Personas Toward Machine–Machine Collaboration**. 2025.
