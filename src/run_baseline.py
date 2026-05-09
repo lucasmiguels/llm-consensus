@@ -79,6 +79,7 @@ def query_agent(
     completion = client.chat.completions.create(
         model=MODEL,
         max_tokens=MAX_TOKENS,
+        temperature=0.0,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": question},
