@@ -4,4 +4,5 @@ numpy==2.2.4
 scipy==1.15.2
 python-dotenv==1.1.0
 rich==14.0.0
+bert-score==0.3.13
 
