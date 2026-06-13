@@ -1,16 +1,19 @@
-# Orquestração de Deliberação Estruturada em Sistemas Multiagente
+# LLM-Consensus — Tornar Personas Relevantes
 
 **Disciplina:** Busca e Recuperação da Informação  
-
-**Dupla:** Lucas Miguel · Mauro Jorge
-
-**Repositório:** [https://github.com/lucasmiguels/llm-consensus](https://github.com/lucasmiguels/llm-consensus)
+**Dupla:** Lucas Miguel · Mauro Jorge Ernesto  
+**Repositório:** https://github.com/lucasmiguels/llm-consensus  
 
 ---
 
-## Objetivo
+## Resumo
 
-Implementar e avaliar um framework de debate iterativo entre múltiplos LLMs inspirado no Método Delphi, capaz de conduzir rodadas de discussão estruturada, sintetizar convergências e divergências, e encerrar o processo com um relatório justificado de consenso ou divergência irredutível.
+Investigamos quais estratégias produzem divergência semântica substancial entre personas
+de LLMs antes de qualquer processo iterativo, condição necessária para que deliberações
+estruturadas (Método Delphi) sejam não-triviais. Avaliamos temperatura, formulação de
+questão, tipo de resposta e sua interação usando um painel de três personas
+(Economista, Cientista da Computação, Sociólogo) e duas métricas complementares de
+divergência (cosseno global e sentence-cosine).
 
 ---
 
@@ -18,73 +21,120 @@ Implementar e avaliar um framework de debate iterativo entre múltiplos LLMs ins
 
 ```
 llm-consensus/
-├── data/          # Questões de entrada e logs de rodadas
-├── notebooks/     # Análise exploratória e visualizações
-├── reports/       # Relatórios e documentos do projeto
-└── src/           # Código-fonte do sistema
+├── src/
+│   ├── run_baseline.py                    # baseline original
+│   ├── experiments/
+│   │   ├── shared.py                      # personas, modelos, utilitários
+│   │   ├── run_temperature.py             # Exp 1: efeito da temperatura
+│   │   ├── run_qualitative.py             # Exp 2a: questões polêmicas
+│   │   ├── run_quantitative.py            # Exp 2b: estimativas numéricas
+│   │   ├── run_grid.py                    # Exp 4: grade temp × questão
+│   │   ├── enrich_metrics.py              # Exp 3: sentence-cosine (local)
+│   │   ├── run_delphi.py                  # Exp 5: ciclo Delphi iterativo
+│   │   └── compare_delphi_baseline.py     # comparação Delphi × baseline
+│   ├── plots/
+│   │   └── generate_plots.py              # gera todas as figuras
+│   └── data/                              # logs JSON de cada experimento
+├── data/
+│   └── delphi/                            # logs do ciclo Delphi
+├── demo/
+│   └── run_demo.py                        # demo interativo do ciclo Delphi
+├── reports/
+│   ├── figures/                           # figuras geradas
+│   └── 05_artigo_final.tex                # artigo final
+├── make_results.sh                        # reproduz todos os resultados
+└── requirements.txt
 ```
 
 ---
 
-## Instruções de Execução (Preliminares)
-
-### Pré-requisitos
+## Pré-requisitos
 
 - Python 3.10+
-- Chave de API para ao menos um provedor de LLM (Anthropic, OpenAI ou equivalente)
+- Chave de API OpenAI com acesso a `gpt-4o-mini` e `text-embedding-3-small`
 
-### Instalação
+---
+
+## Instalação
 
 ```bash
 git clone https://github.com/lucasmiguels/llm-consensus.git
 cd llm-consensus
+python -m venv venv
+source venv/bin/activate  
 pip install -r requirements.txt
 ```
 
 ### Configuração
 
-Crie um arquivo `.env` na raiz com suas chaves de API:
+Crie `.env` na raiz do projeto:
 
 ```
-ANTHROPIC_API_KEY=sk-...
-OPENAI_API_KEY=sk-...   # opcional
-```
-
-### Execução (em breve)
-
-```bash
-python src/run_debate.py --question "Qual o impacto da IA no mercado de trabalho brasileiro?" --rounds 4
+OPENAI_API_KEY=sk-...
 ```
 
 ---
 
-## Baseline (Entrega 2)
+## Demo Rápida
 
-O baseline executa três agentes com personas distintas (economista, cientista da computação, sociólogo) sobre a mesma questão, de forma independente e sem rodadas de feedback. Serve como referência para comparação com o sistema iterativo Delphi.
-
-### Execução via script
+Executa o ciclo Delphi completo com a questão ótima identificada nos experimentos:
 
 ```bash
-# Questão quantitativa
-python src/run_baseline.py -q "Qual percentual dos empregos formais brasileiros você estima que serão automatizados pela IA nos próximos 10 anos? Forneça um número percentual específico com justificativa."
-
-# Questão qualitativa
-python src/run_baseline.py -q "Como a inteligência artificial transformará a educação e o mercado de trabalho brasileiro nos próximos 10 anos? Considere tanto oportunidades quanto riscos."
+python demo/run_demo.py
 ```
 
-### Execução via notebook
+Flags opcionais:
 
 ```bash
-jupyter notebook notebooks/baseline.ipynb
+python demo/run_demo.py --question "Sua questão aqui" --rounds 3 --temperature 0.8
 ```
 
-Selecione a questão na célula 3 e execute todas as células em ordem.
+---
 
-### Saída
+## Reprodução dos Resultados do Artigo
 
-- **Terminal:** tabelas com respostas resumidas, similaridade semântica e estimativas numéricas.
-- **Arquivo:** `data/baseline_YYYYMMDD_HHMMSS.json` com log completo (respostas, tokens, métricas).
+```bash
+bash make_results.sh
+```
 
+O script executa todos os experimentos em ordem, enriquece as métricas e gera as
+figuras usadas no artigo. Os logs ficam em `src/data/` e as figuras em `reports/figures/`.
+
+**Atenção:** o script faz chamadas à API OpenAI. Custo estimado: ~US$ 0,40.
+
+Para reproduzir apenas o ciclo Delphi (Exp 5):
+
+```bash
+python src/experiments/run_delphi.py
+python src/experiments/compare_delphi_baseline.py \
+  --delphi data/delphi/delphi_<timestamp>.json \
+  --baseline src/data/exp4/temp08_obstaculo_adocao_run0_<timestamp>.json
+```
+
+---
+
+## Experimentos Individuais
+
+```bash
+# Exp 1 — efeito da temperatura
+python src/experiments/run_temperature.py
+
+# Exp 2a — questões polêmicas qualitativas
+python src/experiments/run_qualitative.py
+
+# Exp 2b — estimativas numéricas
+python src/experiments/run_quantitative.py
+
+# Exp 3 — enriquecimento com sentence-cosine (sem custo de API)
+python src/experiments/enrich_metrics.py --input-dir src/data/exp1
+python src/experiments/enrich_metrics.py --input-dir src/data/exp2a
+
+# Exp 4 — grade temperatura × questão (125 execuções)
+python src/experiments/run_grid.py
+
+# Gerar figuras
+python src/plots/generate_plots.py
+```
 
 ---
 
