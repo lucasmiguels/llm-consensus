@@ -1,0 +1,19 @@
+{
+  "baseline_divergence": 0.13098028630072134,
+  "delphi_trajectory": {
+    "mean": [
+      0.14388787787242938,
+      0.12288077243292943
+    ],
+    "std": [
+      0.0,
+      0.0
+    ],
+    "n_runs": 1,
+    "max_rounds": 2
+  },
+  "delta_r0_vs_baseline": 0.012907591571708038,
+  "delta_final_vs_baseline": -0.00809951386779191,
+  "delta_final_vs_r0": -0.02100710543949995,
+  "n_delphi_runs": 1
+}

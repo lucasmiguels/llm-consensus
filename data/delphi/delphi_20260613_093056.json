@@ -1,0 +1,122 @@
+{
+  "experiment_type": "delphi",
+  "question": "Qual é o maior obstáculo para adoção em larga escala de IA nas empresas ao redor do mundo?",
+  "timestamp": "2026-06-13T09:30:56.859085",
+  "model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "temperature": 0.8,
+  "max_rounds": 4,
+  "convergence_threshold": 0.05,
+  "rounds": [
+    {
+      "round": 0,
+      "responses": {
+        "economista": {
+          "response": "O maior obstáculo para a adoção em larga escala de inteligência artificial (IA) nas empresas ao redor do mundo é a falta de mão de obra qualificada. Essa escassez de profissionais capacitados para desenvolver, implementar e gerenciar tecnologias de IA limita a capacidade das empresas de integrar essas soluções em seus processos.\n\n### Perspectiva Econômica\n\n1. **Elasticidade do Emprego**: A demanda por trabalho qualificado se torna mais elástica em setores que são rapidamente transformados pela IA. Por exemplo, setores como tecnologia da informação, finanças e saúde têm mostrado uma alta elasticidade na demanda por profissionais qualificados em IA e aprendizado de máquina, devido à crescente automação e à necessidade de análise de dados complexos.\n\n2. **Setores mais Vulneráveis à Automação**: Os setores que mais enfrentam a automação incluem manufatura, transporte e serviços administrativos. Esses setores têm uma alta concentração de tarefas repetitivas e rotineiras que são suscetíveis à automação. Por exemplo, estima-se que até 60% dos empregos em funções administrativas possam ser automatizados nos próximos 10 a 20 anos, segundo o relatório da McKinsey.\n\n3. **Impactos Distributivos**: A adoção da IA pode exacerbar a desigualdade salarial, pois os trabalhadores menos qualificados tendem a ser os mais afetados pela automação e, consequentemente, a perder empregos, enquanto os profissionais de tecnologia e IA podem ver seus salários aumentarem. A OECD estima que 14% dos empregos em países desenvolvidos estão em risco de automação, o que pode levar a uma maior polarização do mercado de trabalho.\n\n4. **Possíveis Políticas de Ajuste**: Para mitigar os impactos negativos da automação, políticas de ajuste são essenciais. Isso inclui:\n   - **Educação e Requalificação**: Investir em programas de educação e requalificação para preparar a força de trabalho para novas demandas de habilidades.\n   - **Incentivos Fiscais**: Criar incentivos fiscais para empresas que investem em treinamento de funcionários.\n   - **Segurança Social**: Reforçar redes de proteção social para trabalhadores que perdem seus empregos devido à automação.\n\nEm resumo, a falta de mão de obra qualificada é um dos principais obstáculos para a adoção em larga escala de IA, e enfrentar essa questão requer uma combinação de políticas educacionais, incentivos econômicos e estratégias de proteção social.",
+          "input_tokens": 118,
+          "output_tokens": 502
+        },
+        "cientista_computacao": {
+          "response": "O maior obstáculo para a adoção em larga escala de IA nas empresas ao redor do mundo pode ser considerado a integração das tecnologias de IA com os processos existentes, que envolve uma série de fatores técnicos, culturais e organizacionais. Abaixo, analiso essa questão sob diferentes perspectivas:\n\n### 1. Capacidades atuais e projetadas dos sistemas de IA\nAtualmente, os sistemas de IA são capazes de realizar tarefas que variam de automação de processos rotineiros a análises complexas de dados. No entanto, muitas empresas ainda enfrentam dificuldades em implementar soluções de IA que realmente agreguem valor aos seus processos. As limitações incluem a necessidade de dados de qualidade, algoritmos adequados e a infraestrutura necessária para suportar essas tecnologias.\n\nA projeção futura indica que as capacidades da IA continuarão a evoluir, com avanços em aprendizado profundo, processamento de linguagem natural e sistemas de recomendação. Isso pode aumentar a eficácia da IA em tarefas cognitivas complexas, mas a transição para uma adoção efetiva ainda requer um planejamento cuidadoso.\n\n### 2. Tipos de tarefas automatizáveis\nAs tarefas que podem ser automatizadas variam do simples ao complexo. Tarefas rotineiras, como o processamento de transações de dados ou atendimento ao cliente básico, já estão sendo amplamente automatizadas. No entanto, a automação de tarefas cognitivas complexas, que requerem julgamento, criatividade e interação humana, ainda enfrenta desafios significativos.\n\n### 3. Limitações técnicas\nEntre as limitações técnicas, destacam-se:\n- **Qualidade e disponibilidade de dados**: Dados imprecisos ou não estruturados podem comprometer a eficácia dos sistemas de IA.\n- **Interoperabilidade**: Dificuldades na integração de soluções de IA com sistemas legados existentes nas empresas.\n- **Falta de expertise**: A escassez de profissionais qualificados em IA e ciência de dados é um barrier para a implementação de projetos.\n\n### 4. Horizontes de tempo realistas para adoção em larga escala\nNo contexto brasileiro, a adoção em larga escala de IA pode ser mais lenta devido a fatores como infraestrutura tecnológica, legislação e cultura organizacional. Um horizonte de tempo realista para que a maioria das empresas brasileiras comece a implementar soluções de IA de forma efetiva seria entre 3 a 5 anos, considerando o investimento em capacitação e adaptação de processos.\n\n### Conclusão\nPortanto, o maior obstáculo para a adoção em larga escala de IA é a dificuldade de integrar essas tecnologias com os processos existentes, impulsionada por limitações técnicas e a falta de uma cultura organizacional que suporte a inovação. Para superar esses obstáculos, as empresas precisarão investir em formação, infraestrutura e um gerenciamento de mudanças eficaz que promova a adoção da IA de forma sustentável.",
+          "input_tokens": 135,
+          "output_tokens": 577
+        },
+        "sociologo": {
+          "response": "A adoção em larga escala de Inteligência Artificial (IA) nas empresas enfrenta uma série de obstáculos, mas, sob a perspectiva sociológica, um dos maiores desafios está relacionado à desigualdade social, que se manifesta de diferentes formas, como classe, gênero e região.\n\n1. **Impactos diferenciados por classe**: A adoção de IA tende a favorecer empresas de maior porte e com maior capital de investimento. Pequenas e médias empresas, que muitas vezes enfrentam limitações financeiras e de acesso à tecnologia, têm mais dificuldade em implementar essas inovações. Isso pode aumentar a desigualdade econômica e de oportunidades entre empresas, consolidando o poder nas mãos das grandes corporações e prejudicando a diversidade do mercado.\n\n2. **Gênero**: A implementação de IA também pode ter implicações de gênero. As mulheres, que já estão sub-representadas em áreas de tecnologia e ciência de dados, podem encontrar ainda mais barreiras para entrar ou se manter no mercado de trabalho à medida que as funções se tornam mais dependentes da tecnologia. A falta de políticas de inclusão e a perpetuação de estereótipos de gênero podem agravar essa situação, limitando as oportunidades de trabalho e avanço para as mulheres.\n\n3. **Região**: O Brasil, por exemplo, apresenta uma enorme disparidade regional. Regiões como o Sudeste têm acesso mais fácil a tecnologia e infraestrutura, enquanto o Norte e Nordeste enfrentam desafios significativos, como a falta de conectividade e habilidades técnicas. Essa desigualdade regional pode resultar em um desenvolvimento desigual da IA, onde algumas áreas se tornam hubs de inovação enquanto outras permanecem à margem.\n\n4. **Transformações nas relações de trabalho**: A introdução de IA também transforma as relações de trabalho, com a automação potencialmente substituindo empregos, especialmente em setores de baixa qualificação. Isso pode gerar resistência entre os trabalhadores, que temem pela perda de seus postos de trabalho e pela desumanização do trabalho, levando a tensões sociais.\n\n5. **Resistências sociais**: Movimentos trabalhistas e sociais podem se organizar em torno da defesa de direitos trabalhistas e contra a automação desenfreada, buscando garantir uma transição justa que inclua requalificação e proteção social. Essas resistências são cruciais para equilibrar os efeitos da IA e promover uma maior inclusão.\n\n6. **Papel das instituições**: As políticas públicas e as instituições têm um papel fundamental em como a IA será adotada. Investimentos em educação, capacitação e infraestrutura são essenciais para garantir que todos os grupos sociais possam se beneficiar da tecnologia. A ausência de uma estratégia governamental coesa pode exacerbar as desigualdades existentes.\n\n7. **Efeitos sobre a coesão social**: A adoção desigual de IA pode potencialmente erodir a coesão social, criando uma divisão entre os que têm acesso às novas tecnologias e aqueles que não têm. Isso pode levar a um aumento da frustração e desconfiança nas instituições, resultando em um ambiente social mais polarizado.\n\nConsiderando esses fatores, o maior obstáculo para a adoção em larga escala de IA é, portanto, a desigualdade social, que se reflete em diferentes dimensões, incluindo classe, gênero e região. Se tivermos que quantificar essa desigualdade, podemos estimar que cerca de 60% da população brasileira ainda não tem acesso a tecnologias que permitem a inserção em um ecossistema digital mais amplo, o que representa um entrave significativo para a adoção generalizada de IA. Essa porcentagem é baseada em dados de inclusão digital e acesso à tecnologia disponíveis até 2023.",
+          "input_tokens": 122,
+          "output_tokens": 743
+        }
+      },
+      "metrics": {
+        "cosine_divergence": {
+          "economista__cientista_computacao": 0.1440442924019696,
+          "economista__sociologo": 0.13632686481190337,
+          "cientista_computacao__sociologo": 0.15129247640341514,
+          "mean": 0.14388787787242938
+        }
+      },
+      "synthesis": null,
+      "revisions": null
+    },
+    {
+      "round": 1,
+      "responses": {
+        "economista": {
+          "response": "O maior obstáculo para a adoção em larga escala de inteligência artificial (IA) nas empresas ao redor do mundo continua a ser a falta de mão de obra qualificada. Essa limitação é crucial para a integração das tecnologias de IA nos processos empresariais.\n\n### Perspectiva Econômica\n\n1. **Elasticidade do Emprego**: A escassez de profissionais qualificados para lidar com a IA torna a demanda por empregos nesses setores mais elástica. O aumento na automação aumenta a necessidade de habilidades específicas, especialmente nas indústrias de tecnologia, saúde e finanças, onde a procura por especialistas em IA e ciência de dados está crescendo rapidamente.\n\n2. **Setores mais Vulneráveis à Automação**: Setores como manufatura, transporte e serviços administrativos são altamente vulneráveis. Estima-se que até 60% dos empregos em funções administrativas podem ser automatizados nos próximos 10 a 20 anos, conforme a análise da McKinsey. Isso ilustra o risco significativo de perda de empregos em setores baseados em tarefas repetitivas.\n\n3. **Impactos Distributivos**: A automação pode exacerbar a desigualdade salarial, com trabalhadores menos qualificados sendo os mais prejudicados. A OECD apontou que 14% dos empregos estão em risco devido à automação, o que pode intensificar a polarização no mercado de trabalho, onde os salários dos trabalhadores qualificados sobem enquanto os menos qualificados enfrentam desemprego.\n\n4. **Possíveis Políticas de Ajuste**: Para mitigar os impactos da automação, é essencial implementar políticas de ajuste que incluam:\n   - **Educação e Requalificação**: Fomentar programas de requalificação que preparem a força de trabalho para novas demandas do mercado.\n   - **Incentivos Fiscais**: Oferecer incentivos fiscais para empresas investirem em treinamento e desenvolvimento de habilidades dos seus funcionários.\n   - **Segurança Social**: Reforçar redes de proteção social para apoiar trabalhadores que perderem seus empregos em decorrência da automação.\n\n5. **Aspectos Éticos e Políticas Públicas**: A discussão sobre a adoção de IA deve considerar também aspectos éticos, como privacidade e viés algorítmico, além da importância de políticas públicas que possam facilitar a adoção responsável da IA, garantindo que sua implementação não agrave as desigualdades sociais existentes.\n\nEm resumo, a falta de mão de obra qualificada é um dos principais obstáculos para a adoção em larga escala de IA. Abordar essa questão requer a combinação de políticas educacionais, incentivos econômicos e estratégias de proteção social, ao mesmo tempo em que se considera a importância de uma abordagem ética e regulatória na implementação dessas tecnologias.",
+          "position_changed": false,
+          "change_justification": null,
+          "input_tokens": 1194,
+          "output_tokens": 593
+        },
+        "cientista_computacao": {
+          "response": "O maior obstáculo para a adoção em larga escala de IA nas empresas ao redor do mundo continua a ser a dificuldade de integração das tecnologias de IA com processos existentes. Essa questão é multifacetada e se desdobra em várias dimensões que merecem ser aprofundadas:\n\n### 1. Capacidades atuais e projetadas dos sistemas de IA\nOs sistemas de IA atualmente oferecem um leque diversificado de funcionalidades que vão desde a automação de tarefas simples até a execução de análises complexas. A evolução dos algoritmos de aprendizado de máquina e o aumento na capacidade de processamento prometem ampliar ainda mais essas capacidades, tornando-os aptos a lidar com tarefas cognitivas complexas. No entanto, a implementação real ainda requer um entendimento profundo por parte das empresas sobre como aplicar essas tecnologias de forma que realmente agreguem valor.\n\n### 2. Tipos de tarefas automatizáveis\nAs empresas têm avançado na automação de tarefas rotineiras, como atendimento ao cliente básico e processamento de dados. Contudo, as tarefas mais complexas, que envolvem julgamento e tomada de decisão criativa, ainda são um campo desafiador. Isso se deve a várias razões, incluindo a necessidade de um contexto mais profundo que a IA, em sua forma atual, não consegue captar plenamente.\n\n### 3. Limitações técnicas\nAs limitações técnicas permanecem um impedimento. Exemplos incluem a **qualidade dos dados**, que é crítica para o sucesso das implementações de IA; **interoperabilidade** entre tecnologias novas e sistemas legados, que pode ser complexa; e a **falta de expertise** em IA, que é uma barreira significativa em muitos setores. O desenvolvimento de talentos na área é essencial para a superação deste obstáculo.\n\n### 4. Horizontes de tempo realistas para adoção em larga escala\nConsiderando o contexto brasileiro, o tempo necessário para uma adoção em larga escala de IA pode ser estendido. Fatores como infraestrutura tecnológica deficiente, a necessidade de formação e a cultura organizacional em setores variados influenciam essa adoção. Um horizonte realista para a implementação bem-sucedida de soluções de IA nas empresas brasileiras é de **5 a 7 anos**. Esse prazo considera não apenas a adoção da tecnologia em si, mas também a transformação dos processos de negócios e a gestão de mudanças necessária para que a IA tenha um impacto positivo.\n\n### Conclusão\nEm conclusão, embora a escassez de mão de obra qualificada e a resistência cultural sejam desafios importantes, o principal obstáculo permanece a integração das tecnologias de IA aos processos existentes. Para superar esse desafio, as empresas precisarão investir em infraestrutura, formação e, crucialmente, na criação de uma cultura que fomente a inovação e a aceitação das novas tecnologias. Isso inclui também uma abordagem atenta às questões éticas e regulamentações que envolvem a implementação de IA, que, se não forem tratadas de forma apropriada, podem representar barreiras adicionais.",
+          "position_changed": false,
+          "change_justification": null,
+          "input_tokens": 1286,
+          "output_tokens": 632
+        },
+        "sociologo": {
+          "response": "A adoção em larga escala de Inteligência Artificial (IA) nas empresas continua a ser um tema complexo, que exige uma análise aprofundada sob a perspectiva sociológica, especialmente considerando as desigualdades sociais que permeiam diferentes dimensões da sociedade. Neste contexto, reafirmo que o maior obstáculo para a adoção de IA é a desigualdade social, que se manifesta nas esferas de classe, gênero e região.\n\n1. **Impactos diferenciados por classe**: As grandes corporações têm um acesso privilegiado a investimentos e tecnologias que facilitam a implementação de IA. As pequenas e médias empresas, por sua vez, frequentemente enfrentam desafios financeiros e de infraestrutura que dificultam sua inclusão no ecossistema digital. Isso acentua a concentração de poder econômico e reduz a diversidade no mercado, perpetuando um ciclo de desigualdade.\n\n2. **Gênero**: A presença reduzida de mulheres em campos relacionados à tecnologia é um reflexo de desigualdades históricas que se manifestam mais acentuadamente na era da IA. A falta de políticas de inclusão e a persistência de estereótipos de gênero podem resultar em um ambiente de trabalho ainda mais hostil para as mulheres, confinando-as a posições de menor importância e limitando suas oportunidades de avanço.\n\n3. **Região**: A distribuição desigual de tecnologia e infraestrutura no Brasil cria um cenário em que regiões como o Sudeste se destacam como polos de inovação, enquanto o Norte e Nordeste ficam para trás. Essa disparidade regional não apenas limita o acesso dos trabalhadores a novas oportunidades, mas também enfraquece o desenvolvimento nacional como um todo.\n\n4. **Transformações nas relações de trabalho**: À medida que a IA se torna mais integrada aos processos produtivos, trabalhadores de setores com alta automação, especialmente aqueles com baixa qualificação, enfrentam o risco de desemprego e precarização. A resistência social que emerge dessa insegurança é um indicativo da necessidade de uma abordagem mais equilibrada e humana na implementação de tecnologias.\n\n5. **Resistências sociais**: Movimentos trabalhistas e sociais têm se mobilizado em resposta a essas mudanças, exigindo políticas que garantam um futuro do trabalho mais inclusivo e justo. Essas lutas são essenciais para garantir que as transformações trazidas pela IA não resultem em um aumento da desigualdade e da exclusão social.\n\n6. **Papel das instituições**: As instituições desempenham um papel crucial na mediação desses desafios. Políticas públicas que promovam a educação, a capacitação e a inclusão digital são fundamentais para que a sociedade como um todo possa usufruir dos avanços tecnológicos. A ausência de uma estratégia coesa pode perpetuar as desigualdades existentes e criar um ambiente de desconfiança nas instituições.\n\n7. **Efeitos sobre a coesão social**: A adoção desigual de IA pode levar à fragmentação social, exacerbando divisões entre grupos que têm acesso às novas tecnologias e aqueles que não têm. Essa polarização pode gerar tensões sociais significativas, desafiando a coesão social e a estabilidade política.\n\nDiante desse complexo panorama, reitero que a desigualdade social é o principal obstáculo para a adoção em larga escala de IA. A estimativa de que cerca de 60% da população brasileira ainda não tem acesso a tecnologias adequadas, que facilite a inserção em um ecossistema digital mais amplo, continua a ser válida. Esse dado reforça a urgência de investimentos em inclusão digital e educação, fundamentais para garantir uma transição mais equitativa e sustentável na era da inteligência artificial.",
+          "position_changed": false,
+          "change_justification": null,
+          "input_tokens": 1439,
+          "output_tokens": 768
+        }
+      },
+      "metrics": {
+        "cosine_divergence": {
+          "economista__cientista_computacao": 0.10122502154277746,
+          "economista__sociologo": 0.12386287230139736,
+          "cientista_computacao__sociologo": 0.14355442345461344,
+          "mean": 0.12288077243292943
+        }
+      },
+      "synthesis": {
+        "convergencias": [
+          "A falta de mão de obra qualificada é um obstáculo significativo para a adoção de IA, conforme destacado pelo Economista e pelo Cientista da Computação.",
+          "A integração da IA com processos existentes é um desafio comum, reconhecido pelo Cientista da Computação e pelo Sociólogo, que também menciona a resistência social e as transformações nas relações de trabalho."
+        ],
+        "divergencias": [
+          "O Economista foca na escassez de mão de obra qualificada como o principal obstáculo, enquanto o Cientista da Computação enfatiza a dificuldade de integração das tecnologias de IA com processos existentes.",
+          "O Sociólogo argumenta que a desigualdade social é o maior obstáculo, destacando como isso afeta diferentes classes sociais, gêneros e regiões, o que não é abordado pelos outros dois participantes."
+        ],
+        "dimensoes_nao_abordadas": [
+          "Aspectos éticos da adoção de IA nas empresas, como privacidade e viés algorítmico.",
+          "O papel das políticas públicas e regulamentações na facilitação ou restrição da adoção de IA."
+        ],
+        "feedback": "As respostas apresentaram uma diversidade de perspectivas sobre os obstáculos à adoção de IA, mas as divergências entre a ênfase na escassez de mão de obra qualificada, a integração tecnológica e a desigualdade social precisam ser aprofundadas. Convido os participantes a explorar como esses fatores interagem e a considerar soluções que abordem múltiplas dimensões do problema, incluindo aspectos éticos e o papel das políticas públicas."
+      },
+      "revisions": {
+        "economista": {
+          "position_changed": false,
+          "change_justification": null,
+          "input_tokens": 1194,
+          "output_tokens": 593
+        },
+        "cientista_computacao": {
+          "position_changed": false,
+          "change_justification": null,
+          "input_tokens": 1286,
+          "output_tokens": 632
+        },
+        "sociologo": {
+          "position_changed": false,
+          "change_justification": null,
+          "input_tokens": 1439,
+          "output_tokens": 768
+        }
+      }
+    }
+  ],
+  "stop_reason": "sem_revisao",
+  "trajectory": {
+    "cosine_divergence_mean": [
+      0.14388787787242938,
+      0.12288077243292943
+    ],
+    "revision_rate": [
+      null,
+      0.0
+    ]
+  }
+}

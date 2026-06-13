@@ -1,0 +1,19 @@
+{
+  "experiment": "exp3_enrich_metrics",
+  "input_dir": "data/delphi",
+  "sbert_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "n_runs": 1,
+  "correlations": {
+    "cosine_vs_sentence_cosine": NaN
+  },
+  "results": [
+    {
+      "file": "delphi_20260613_093056.json",
+      "question_key": "Qual é o maior obstáculo para adoção em ",
+      "temperature": 0.8,
+      "run_index": null,
+      "cosine_divergence": 0.1438878778724294,
+      "sentence_cosine_divergence": 0.36520832565971173
+    }
+  ]
+}
