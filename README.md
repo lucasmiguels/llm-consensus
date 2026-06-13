@@ -141,3 +141,17 @@ python src/plots/generate_plots.py
 ## Referências
 
 Nóbrega, L. et al. **AI-Delphi: Emulating Personas Toward Machine–Machine Collaboration**. 2025.
+
+Dalkey, N.; Helmer, O. **An Experimental Application of the Delphi Method to the Use of Experts**. 1963.
+
+Linstone, H.A.; Turoff, M. (Ed.) **The Delphi Method: Techniques and Applications**. Addison-Wesley, 1975.
+
+Argyle, L.P. et al. **Out of One, Many: Using Language Models to Simulate Human Samples**. 2023.
+
+Park, J.S. et al. **Generative Agents: Interactive Simulacra of Human Behavior**. 2023.
+
+Du, Y. et al. **Improving Factuality and Reasoning in Language Models through Multiagent Debate**. 2024.
+
+Zhang, T. et al. **BERTScore: Evaluating Text Generation with BERT**. 2020.
+
+Reimers, N.; Gurevych, I. **Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks**. 2019.
