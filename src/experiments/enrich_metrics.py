@@ -14,7 +14,7 @@ from rich.console import Console
 from rich.table import Table
 from rich import box
 
-from experiments.shared import PERSONA_PAIRS, save_json
+from experiments.shared import PERSONA_NAMES, PERSONA_PAIRS, save_json
 
 SBERT_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 
@@ -61,6 +61,40 @@ def compute_sentence_cosine(responses: list[dict]) -> dict:
     return scores
 
 
+def enrich_delphi_log(run: dict) -> dict:
+    """Enrich a Delphi log by computing sentence-cosine for each round."""
+    enriched = dict(run)
+    enriched["rounds"] = []
+    sent_div_per_round = []
+
+    for r in run["rounds"]:
+        round_copy = dict(r)
+        responses_dict = r.get("responses", {})
+        responses_list = [
+            {"persona": p, "response": responses_dict[p]["response"]}
+            for p in PERSONA_NAMES
+            if p in responses_dict
+        ]
+        if len(responses_list) >= 2:
+            sent_scores = compute_sentence_cosine(responses_list)
+            sent_div = 1.0 - sent_scores["mean_f1"]
+        else:
+            sent_scores = {}
+            sent_div = None
+
+        round_copy["metrics"] = dict(r.get("metrics", {}))
+        round_copy["metrics"]["sentence_cosine"] = sent_scores
+        round_copy["metrics"]["sentence_cosine_divergence"] = sent_div
+        enriched["rounds"].append(round_copy)
+        if sent_div is not None:
+            sent_div_per_round.append(sent_div)
+
+    traj = dict(run.get("trajectory", {}))
+    traj["sentence_cosine_divergence_mean"] = sent_div_per_round
+    enriched["trajectory"] = traj
+    return enriched
+
+
 def load_runs(input_dir: str) -> list[tuple[str, dict]]:
     pattern = os.path.join(input_dir, "*.json")
     runs = []
@@ -98,6 +132,26 @@ def main() -> None:
     summary_rows = []
 
     for i, (fname, run) in enumerate(runs):
+        # ── Delphi log ────────────────────────────────────────────────────────
+        if run.get("experiment_type") == "delphi":
+            console.print(f"[{i+1:>3}/{len(runs)}] {fname} [delphi]…", end=" ")
+            enriched = enrich_delphi_log(run)
+            save_json(enriched, os.path.join(output_dir, fname))
+            traj = enriched["trajectory"]
+            sent_divs = traj.get("sentence_cosine_divergence_mean", [])
+            cos_divs = traj.get("cosine_divergence_mean", [])
+            console.print(f"rounds={len(enriched['rounds'])}  sent_div_r0={sent_divs[0]:.4f}" if sent_divs else "no rounds")
+            summary_rows.append({
+                "file": fname,
+                "question_key": run.get("question", "delphi")[:40],
+                "temperature": run.get("temperature"),
+                "run_index": None,
+                "cosine_divergence": (1.0 - (1.0 - cos_divs[0])) if cos_divs else None,
+                "sentence_cosine_divergence": sent_divs[0] if sent_divs else None,
+            })
+            continue
+
+        # ── Regular experiment log ─────────────────────────────────────────────
         responses = run.get("responses", [])
 
         if responses and "justification" in responses[0]:
